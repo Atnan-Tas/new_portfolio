@@ -57,15 +57,15 @@ const About = () => {
         className="w-full md:w-1/2 mt-8 md:mt-0 md:pl-8"
       >
         <h2 className="text-4xl font-bold mb-4">À propos de moi</h2>
-        <p className="text-lg leading-relaxed mb-6">
-          Salut ! 👋 Je m'appelle Atnan Tas, étudiant en Métiers du Multimédia et de l'Internet (MMI) à Montbéliard.
-          <br /><br />
-          Passionné par le **design graphique**, le **développement web** et le **montage vidéo**, je m'efforce de créer des expériences visuelles et interactives uniques.
-          <br /><br />
-          En dehors de mes études, je suis un grand fan de **football ⚽️**, **basketball 🏀**, et **jeux vidéo 🎮**. La **musique 🎧** m'accompagne aussi dans chaque moment de création.
-          <br /><br />
-          👉 **Mon objectif ?** Allier créativité et compétences techniques pour concevoir des projets qui marquent les esprits.
-        </p>
+        {/* <p className="text-lg leading-relaxed mb-6">
+  Salut ! 👋 Je m&apos;appelle Atnan Tas, étudiant en Métiers du Multimédia et de l&apos;Internet (MMI) à Montbéliard.
+  <br /><br />
+  Passionné par le **design graphique**, le **développement web** et le **montage vidéo**, je m&apos;efforce de créer des expériences visuelles et interactives uniques.
+  <br /><br />
+  En dehors de mes études, je suis un grand fan de **football ⚽️**, **basketball 🏀**, et **jeux vidéo 🎮**. La **musique 🎧** m&apos;accompagne aussi dans chaque moment de création.
+  <br /><br />
+  👉 **Mon objectif ?** Allier créativité et compétences techniques pour concevoir des projets qui marquent les esprits.
+</p> */}
 
         {/* Boutons */}
         <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">

@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Mon Portfoli | Accueil</title>
+        <title>Mon Portfolio | Accueil</title>
         <meta name="description" content="Portfolio d'Atnan Tas, designer graphique." />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -17,7 +17,7 @@ export default function Home() {
       <Header />
       
 
-      {/* Condmkza,dmkazl,dmlkaz,dtenu principal */}
+      {/* Contenu principal */}
       <main>
       <Hero />  
       <Hero2 />

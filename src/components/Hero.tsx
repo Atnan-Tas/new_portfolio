@@ -1,8 +1,6 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import Image from 'next/image';
 
 const Hero = () => {
   const [isDark, setIsDark] = useState(false);
@@ -29,10 +27,10 @@ const Hero = () => {
         className="min-h-screen flex flex-col justify-center items-center p-8"
       >
         <h2 className="text-5xl font-bold text-center max-w-4xl leading-tight">
-          Vous cherchez quelqu'un qui sait designer, développer, communiquer ?
+          Vous cherchez quelqu&apos;un qui sait designer, développer, communiquer ?
         </h2>
         <p className="mt-4 text-xl text-center max-w-3xl">
-          Je crois que vous n'êtes pas très loin d'avoir trouvé...
+          Je crois que vous n&apos;êtes pas très loin d&apos;avoir trouvé...
         </p>
       </section>
     </div>

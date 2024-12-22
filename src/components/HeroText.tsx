@@ -25,7 +25,7 @@ const HeroText = () => {
         animate={{ scale: 1, opacity: 1 }}
         transition={{ duration: 2, ease: "easeOut" }}
         onUpdate={(latest) => {
-          if (latest.scale <= 1.1) {
+          if (typeof latest.scale === 'number' && latest.scale <= 1.1) {
             controls.start('visible'); 
           }
         }}
