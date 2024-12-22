@@ -21,7 +21,7 @@ export default function Home() {
       <main>
       <Hero />  
       <Hero2 />
-      <About />
+      <About /> 
       </main>
     </>
   );
