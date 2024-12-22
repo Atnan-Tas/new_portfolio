@@ -26,7 +26,7 @@ const HeroText = () => {
         transition={{ duration: 2, ease: "easeOut" }}
         onUpdate={(latest) => {
           if (latest.scale <= 1.1) {
-            controls.start('visible');
+            controls.start('visible'); 
           }
         }}
       >
