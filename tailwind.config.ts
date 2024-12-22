@@ -8,6 +8,11 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        geist: "var(--font-geist-sans)",
+        poppins: "var(--font-poppins)",
+        mono: "var(--font-geist-mono)",
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
