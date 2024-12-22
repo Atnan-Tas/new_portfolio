@@ -17,7 +17,7 @@ export default function Home() {
       <Header />
       
 
-      {/* Contenu principal */}
+      {/* Condmkza,dmkazl,dmlkaz,dtenu principal */}
       <main>
       <Hero />  
       <Hero2 />
