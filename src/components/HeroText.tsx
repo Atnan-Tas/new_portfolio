@@ -8,13 +8,21 @@ const HeroText = () => {
 
   useEffect(() => {
     const startTextAnimation = async () => {
-      // Wait for half the duration of the video zoom animation
+      // Attente avant de lancer l'animation du texte
       await controls.start({ scale: 1.1 });
       await controls.start({ scale: 1 });
     };
 
     startTextAnimation();
   }, [controls]);
+
+  // 🎯 Fonction pour défiler jusqu'à la section Hero
+  const scrollToHero = () => {
+    const heroSection = document.getElementById('second-section');
+    if (heroSection) {
+      heroSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
 
   return (
     <div className="relative flex flex-col items-center justify-center min-h-screen bg-[#fafaf8] overflow-hidden">
@@ -23,10 +31,10 @@ const HeroText = () => {
         className="absolute inset-0 flex justify-center items-center"
         initial={{ scale: 1.2, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
-        transition={{ duration: 2, ease: "easeOut" }}
+        transition={{ duration: 2, ease: 'easeOut' }}
         onUpdate={(latest) => {
           if (typeof latest.scale === 'number' && latest.scale <= 1.1) {
-            controls.start('visible'); 
+            controls.start('visible');
           }
         }}
       >
@@ -49,46 +57,74 @@ const HeroText = () => {
           className="text-8xl font-bold"
           variants={{
             hidden: { y: 100, opacity: 0 },
-            visible: { y: 0, opacity: 1 }
+            visible: { y: 0, opacity: 1 },
           }}
           initial="hidden"
           animate={controls}
-          transition={{ duration: 1, ease: "easeOut", delay: 0.06 }}
+          transition={{ duration: 1, ease: 'easeOut', delay: 0.06 }}
         >
           <span className="text-black">BO</span>
           <span className="text-white">NJOUR, JE SUIS ATN</span>
           <span className="text-black">AN</span>
         </motion.h1>
-    
+
         {/* Outline Text */}
         <motion.h1
           className="text-8xl font-bold text-[#E6332A] mt-6"
           variants={{
             hidden: { y: 100, opacity: 0 },
-            visible: { y: 0, opacity: 1 }
+            visible: { y: 0, opacity: 1 },
           }}
           initial="hidden"
           animate={controls}
-          transition={{ duration: 1.2, ease: "easeOut", delay: 0.09 }}
+          transition={{ duration: 1.2, ease: 'easeOut', delay: 0.09 }}
         >
           BONJOUR, JE SUIS ATNAN
         </motion.h1>
-    
+
         {/* Semi-transparent Text */}
         <motion.h1
           className="text-8xl font-bold text-black mt-6 opacity-50"
           variants={{
             hidden: { y: 100, opacity: 0 },
-            visible: { y: 0, opacity: 1 }
+            visible: { y: 0, opacity: 1 },
           }}
           initial="hidden"
           animate={controls}
-          transition={{ duration: 1.4, ease: "easeOut", delay: 0.15 }}
+          transition={{ duration: 1.4, ease: 'easeOut', delay: 0.15 }}
         >
           <span className="text-black">BO</span>
           <span className="text-white">NJOUR, JE SUIS ATN</span>
           <span className="text-black">AN</span>
         </motion.h1>
+      </div>
+
+      {/* Animated Arrow */}
+      <div className="absolute bottom-8 flex justify-center">
+        <motion.div
+          onClick={scrollToHero}
+          className="cursor-pointer"
+          initial={{ y: 0 }}
+          animate={{
+            y: [0, 10, 0], // Animation de rebond
+          }}
+          transition={{
+            duration: 1.5,
+            repeat: Infinity,
+            ease: 'easeInOut',
+          }}
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={2}
+            stroke="currentColor"
+            className="w-10 h-10 text-[#202020] hover:text-[#E6332A] transition-colors"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+          </svg>
+        </motion.div>
       </div>
     </div>
   );

@@ -3,6 +3,8 @@ import Header from '../components/Header';
 import Hero from '../components/HeroText'
 import Hero2 from '../components/Hero'
 import About from '../components/About'
+import Contact from '../components/Contact'
+import Footer from '../components/Footer'
 
 export default function Home() {
   return (
@@ -22,7 +24,11 @@ export default function Home() {
       <Hero />  
       <Hero2 />
       <About />  
+      <Contact />
       </main>
+      <footer>
+        <Footer />
+      </footer>
     </>
   );
 }

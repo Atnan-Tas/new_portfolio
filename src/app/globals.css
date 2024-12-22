@@ -20,3 +20,29 @@ body {
     font-family: var(--font-poppins), sans-serif;
   }
 
+  @keyframes blink {
+    50% {
+      opacity: 0;
+    }
+  }
+  
+  .animate-blink {
+    display: inline-block;
+    width: 1ch;
+    animation: blink 1s step-end infinite;
+  }
+  
+
+  .Typewriter__cursor {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #e6432a;
+    animation: blink 1s infinite;
+  }
+  
+  @keyframes blink {
+    50% {
+      opacity: 0;
+    }
+  }
+  
