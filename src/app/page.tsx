@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Mon Portfolio | Accueil</title>
+        <title>Mon Portfoli | Accueil</title>
         <meta name="description" content="Portfolio d'Atnan Tas, designer graphique." />
         <link rel="icon" href="/favicon.ico" />
       </Head>
