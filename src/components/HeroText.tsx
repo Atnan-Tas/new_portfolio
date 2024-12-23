@@ -8,7 +8,6 @@ const HeroText = () => {
 
   useEffect(() => {
     const startTextAnimation = async () => {
-      // Attente avant de lancer l'animation du texte
       await controls.start({ scale: 1.1 });
       await controls.start({ scale: 1 });
     };
@@ -16,17 +15,17 @@ const HeroText = () => {
     startTextAnimation();
   }, [controls]);
 
-  // 🎯 Fonction pour défiler jusqu'à la section Hero
+  // 🎯 Fonction pour défiler lentement jusqu'à la section Hero
   const scrollToHero = () => {
     const heroSection = document.getElementById('second-section');
     if (heroSection) {
-      heroSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      heroSection.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
   return (
-    <div className="relative flex flex-col items-center justify-center min-h-screen bg-[#fafaf8] overflow-hidden">
-      {/* Video with Zoom Animation */}
+    <div className="relative flex flex-col items-center justify-center min-h-screen bg-[#fafaf8] overflow-hidden px-4 md:px-12 lg:px-24">
+      {/* ✅ Video with Zoom Animation */}
       <motion.div
         className="absolute inset-0 flex justify-center items-center"
         initial={{ scale: 1.2, opacity: 0 }}
@@ -43,18 +42,18 @@ const HeroText = () => {
           loop
           muted
           playsInline
-          className="w-[60%] h-[60%] object-cover rounded-3xl shadow-lg"
+          className="w-[90%] md:w-[70%] lg:w-[60%] h-auto object-cover rounded-3xl shadow-lg"
         >
           <source src="/BG.mp4" type="video/mp4" />
           Votre navigateur ne supporte pas la lecture de vidéos.
         </video>
       </motion.div>
 
-      {/* Text Container */}
+      {/* ✅ Text Container */}
       <div className="relative z-10 flex flex-col items-center text-center">
         {/* Solid Text */}
         <motion.h1
-          className="text-8xl font-bold"
+          className="text-2xl sm:text-4xl md:text-5xl lg:text-8xl font-bold"
           variants={{
             hidden: { y: 100, opacity: 0 },
             visible: { y: 0, opacity: 1 },
@@ -70,7 +69,7 @@ const HeroText = () => {
 
         {/* Outline Text */}
         <motion.h1
-          className="text-8xl font-bold text-[#E6332A] mt-6"
+          className="text-2xl sm:text-4xl md:text-5xl lg:text-8xl font-bold text-[#E6332A] mt-4 md:mt-6"
           variants={{
             hidden: { y: 100, opacity: 0 },
             visible: { y: 0, opacity: 1 },
@@ -84,7 +83,7 @@ const HeroText = () => {
 
         {/* Semi-transparent Text */}
         <motion.h1
-          className="text-8xl font-bold text-black mt-6 opacity-50"
+          className="text-2xl sm:text-4xl md:text-5xl lg:text-8xl font-bold text-black mt-4 md:mt-6 opacity-50"
           variants={{
             hidden: { y: 100, opacity: 0 },
             visible: { y: 0, opacity: 1 },
@@ -99,7 +98,7 @@ const HeroText = () => {
         </motion.h1>
       </div>
 
-      {/* Animated Arrow */}
+      {/* ✅ Animated Arrow */}
       <div className="absolute bottom-8 flex justify-center">
         <motion.div
           onClick={scrollToHero}
@@ -120,7 +119,7 @@ const HeroText = () => {
             viewBox="0 0 24 24"
             strokeWidth={2}
             stroke="currentColor"
-            className="w-10 h-10 text-[#202020] hover:text-[#E6332A] transition-colors"
+            className="w-8 h-8 md:w-10 md:h-10 text-[#202020] hover:text-[#E6332A] transition-colors"
           >
             <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
           </svg>

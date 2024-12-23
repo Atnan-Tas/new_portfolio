@@ -46,3 +46,14 @@ body {
     }
   }
   
+  #second-section {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    position: relative;
+  }
+  
+  .star-animation {
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  
