@@ -42,7 +42,7 @@ const Contact = () => {
       } else {
         setResponseMessage(`❌ Erreur : ${result.error || 'Une erreur est survenue.'}`);
       }
-    } catch (_) {
+    } catch {
       setResponseMessage('❌ Une erreur inattendue est survenue.');
     } finally {
       setIsLoading(false);

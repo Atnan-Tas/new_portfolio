@@ -5,8 +5,7 @@ import { useState, useEffect, createContext, useContext } from 'react';
 // 🎯 Créer un contexte pour le thème
 const ThemeContext = createContext({
   isDark: false,
-  setIsDark: (_: boolean) => {}, // Correction du paramètre inutilisé
-});
+  });
 
 // 🎯 Hook personnalisé pour accéder au thème
 export const useTheme = () => useContext(ThemeContext);
@@ -31,7 +30,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   }, []);
 
   return (
-    <ThemeContext.Provider value={{ isDark, setIsDark }}>
+    <ThemeContext.Provider value={{ isDark }}>
       <div
         className={`transition-colors duration-500 ${
           isDark ? 'bg-[#202020] text-[#fafaf8]' : 'bg-[#fafaf8] text-[#202020]'
