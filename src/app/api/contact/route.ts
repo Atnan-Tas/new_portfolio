@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { Resend } from 'resend';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+const resend = new Resend(process.env.RESEND_API_KEY || '');
 
 export async function POST(req: NextRequest) {
   try {
@@ -11,13 +11,17 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: 'Tous les champs sont requis.' }, { status: 400 });
     }
 
+    if (!process.env.RESEND_API_KEY) {
+      throw new Error('API key manquante. Assurez-vous que RESEND_API_KEY est défini dans vos variables d’environnement.');
+    }
+
     console.log('🛠️ Envoi d\'e-mail en cours...');
     console.log('API KEY:', process.env.RESEND_API_KEY);
     console.log('FROM EMAIL:', process.env.FROM_EMAIL);
 
     const data = await resend.emails.send({
       from: process.env.FROM_EMAIL || 'no-reply@atnantas.com',
-      to: ['atnan.tas.pro@gmail.com'], // Assure-toi que cette adresse est correcte
+      to: ['atnan.tas.pro@gmail.com'],
       subject: `Nouveau message de ${name}`,
       text: `Vous avez reçu un message de ${name} (${email}):\n\n${message}`,
     });
