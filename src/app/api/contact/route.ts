@@ -25,7 +25,7 @@ export async function POST(req: NextRequest) {
       subject: `Nouveau message de ${name}`,
       text: `Vous avez reçu un message de ${name} (${email}):\n\n${message}`,
     });
- 
+  
     console.log('✅ E-mail envoyé avec succès:', data);
 
     return NextResponse.json({ success: true, data });
