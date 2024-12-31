@@ -66,7 +66,7 @@ const Hero = () => {
 
         {/* Sous-texte statique */}
         <p className="mt-4 text-lg sm:text-xl md:text-2xl text-center max-w-3xl opacity-75">
-          Je crois que vous n'êtes pas très loin d'avoir trouvé...
+          Je crois que vous n&apos;êtes pas très loin d&pos;avoir trouvé...
         </p>
       </section>
 

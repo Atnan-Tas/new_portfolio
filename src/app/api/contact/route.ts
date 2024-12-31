@@ -25,8 +25,13 @@ export async function POST(req: NextRequest) {
     console.log('✅ E-mail envoyé avec succès:', data);
 
     return NextResponse.json({ success: true, data });
-  } catch (error: any) {
-    console.error('❌ Erreur API Resend:', error.message || error);
-    return NextResponse.json({ error: error.message || 'Erreur lors de l\'envoi de l\'e-mail.' }, { status: 500 });
+  } catch (error: unknown) {
+    if (error instanceof Error) {
+      console.error('❌ Erreur API Resend:', error.message);
+      return NextResponse.json({ error: error.message }, { status: 500 });
+    } else {
+      console.error('❌ Erreur inconnue:', error);
+      return NextResponse.json({ error: 'Erreur inconnue lors de l\'envoi de l\'e-mail.' }, { status: 500 });
+    }
   }
 }

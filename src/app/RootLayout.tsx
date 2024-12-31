@@ -5,7 +5,7 @@ import { useState, useEffect, createContext, useContext } from 'react';
 // 🎯 Créer un contexte pour le thème
 const ThemeContext = createContext({
   isDark: false,
-  setIsDark: (value: boolean) => {},
+  setIsDark: (_: boolean) => {}, // Correction du paramètre inutilisé
 });
 
 // 🎯 Hook personnalisé pour accéder au thème

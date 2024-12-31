@@ -95,7 +95,7 @@ const Projects = () => {
         {/* ✅ Back to Home */}
         <div className="text-center mt-8 md:mt-16">
           <Link href="/" className="text-sm md:text-lg font-bold text-[#fafaf8] hover:underline">
-            ← Retour à l'accueil
+            ← Retour à l&apos;accueil
           </Link>
         </div>
       </main>

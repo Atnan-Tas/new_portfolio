@@ -42,7 +42,7 @@ const Contact = () => {
       } else {
         setResponseMessage(`❌ Erreur : ${result.error || 'Une erreur est survenue.'}`);
       }
-    } catch (error) {
+    } catch (_) {
       setResponseMessage('❌ Une erreur inattendue est survenue.');
     } finally {
       setIsLoading(false);
@@ -79,7 +79,7 @@ const Contact = () => {
         <h2 className="text-6xl font-bold">Vous avez besoin de moi ?</h2>
         <h3 className="text-4xl font-semibold">Alors allons-y</h3>
         <p className="text-lg text-[#555555]">
-          Je suis à la recherche d'opportunités en tant que freelance ou pour un stage/alternance dans des startups, agences et studios de design.
+          Je suis à la recherche d&apos;opportunités en tant que freelance ou pour un stage/alternance dans des startups, agences et studios de design.
         </p>
 
         {/* 📝 Formulaire */}
