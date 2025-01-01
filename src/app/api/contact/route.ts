@@ -23,10 +23,9 @@ export async function POST(request: Request) {
         </div>
       `,
     });
-
     return NextResponse.json({ success: true, data });
-  } catch (error: any) {
-    console.error('Erreur API Resend:', error.message || error);
-    return NextResponse.json({ error: error.message || 'Erreur serveur' }, { status: 500 });
+    } catch (error) {
+    console.error('Erreur API Resend:', (error as Error).message || error);
+    return NextResponse.json({ error: (error as Error).message || 'Erreur serveur' }, { status: 500 });
+    }
   }
-}

@@ -44,7 +44,7 @@ const Contact = () => {
       } else {
         setSubmitError(result.error || 'Erreur lors de l\'envoi du message.');
       }
-    } catch (error) {
+    } catch {
       setSubmitError('Une erreur est survenue.');
     }
   };
