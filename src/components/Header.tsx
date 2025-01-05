@@ -14,39 +14,6 @@ const Header = ({ forceDarkMode = false }: HeaderProps) => {
   const [isDark, setIsDark] = useState(forceDarkMode);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  useEffect(() => {
-    if (forceDarkMode) return; // Ne pas écouter le scroll si forcé
-
-    const handleScroll = () => {
-      const heroSection = document.getElementById('hero-section');
-      if (heroSection) {
-        const rect = heroSection.getBoundingClientRect();
-        setIsDark(
-          rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2
-        );
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [forceDarkMode]);
-
-  const scrollToAbout = () => {
-    const aboutSection = document.getElementById('about-section');
-    if (aboutSection) {
-      aboutSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-    setIsMenuOpen(false);
-  };
-
-  const scrollToContact = () => {
-    const contactSection = document.getElementById('contact');
-    if (contactSection) {
-      contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-    setIsMenuOpen(false);
-  };
-
   return (
     <header
       className={`fixed top-0 left-0 w-full p-4 md:p-6 z-50 transition-colors duration-500 shadow-md ${
@@ -68,15 +35,12 @@ const Header = ({ forceDarkMode = false }: HeaderProps) => {
 
         {/* ✅ Menu Desktop */}
         <nav className="hidden md:flex space-x-6">
-          <a
-            onClick={(e) => {
-              e.preventDefault();
-              scrollToAbout();
-            }}
-            className="font-bold cursor-pointer hover:underline transition-colors"
+          <Link
+            href="/#about-section"
+            className="font-bold hover:underline transition-colors"
           >
             À PROPOS
-          </a>
+          </Link>
           <Link
             href="/projects"
             className="font-bold hover:underline transition-colors"
@@ -86,11 +50,8 @@ const Header = ({ forceDarkMode = false }: HeaderProps) => {
         </nav>
 
         {/* ✅ Bouton Contact */}
-        <button
-          onClick={(e) => {
-            e.preventDefault();
-            scrollToContact();
-          }}
+        <Link
+          href="/#contact"
           className={`hidden md:block px-4 py-2 rounded-full font-medium cursor-pointer transition-colors duration-300 ${
             isDark || forceDarkMode
               ? 'bg-[#FAFAF8] text-[#202020] hover:bg-gray-300'
@@ -98,7 +59,7 @@ const Header = ({ forceDarkMode = false }: HeaderProps) => {
           }`}
         >
           CONTACTEZ-MOI !
-        </button>
+        </Link>
 
         {/* ✅ Menu Hamburger */}
         <button
@@ -121,34 +82,31 @@ const Header = ({ forceDarkMode = false }: HeaderProps) => {
           >
             <ul className="flex flex-col items-center space-y-4 py-6">
               <li>
-                <a
-                  onClick={(e) => {
-                    e.preventDefault();
-                    scrollToAbout();
-                  }}
-                  className="font-bold text-lg cursor-pointer hover:underline"
+                <Link
+                  href="/about"
+                  className="font-bold text-lg hover:underline"
+                  onClick={() => setIsMenuOpen(false)}
                 >
                   À PROPOS
-                </a>
+                </Link>
               </li>
               <li>
                 <Link
                   href="/projects"
                   className="font-bold text-lg hover:underline"
+                  onClick={() => setIsMenuOpen(false)}
                 >
                   MES TRAVAUX
                 </Link>
               </li>
               <li>
-                <button
-                  onClick={(e) => {
-                    e.preventDefault();
-                    scrollToContact();
-                  }}
+                <Link
+                  href="/contact"
                   className="px-4 py-2 rounded-full font-medium cursor-pointer bg-[#FAFAF8] text-[#202020] hover:bg-gray-300"
+                  onClick={() => setIsMenuOpen(false)}
                 >
                   CONTACTEZ-MOI !
-                </button>
+                </Link>
               </li>
             </ul>
           </motion.nav>

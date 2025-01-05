@@ -1,21 +1,59 @@
 'use client';
 
 import { useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 import Image from 'next/image';
 import Header from '../../components/Header';
+import Footer from '@/components/Footer';
 
 const Projects = () => {
   const [filter, setFilter] = useState('Tous');
+  const [expandedProject, setExpandedProject] = useState(null);
 
   const projects = [
-    { title: 'Projet 1', image: '/project1.jpg', link: '/projects/projet1', category: 'Design' },
-    { title: 'Projet 2', image: '/project2.jpg', link: '/projects/projet2', category: 'Design' },
-    { title: 'Projet 3', image: '/project3.jpg', link: '/projects/projet3', category: 'Sites' },
-    { title: 'Projet 4', image: '/project4.jpg', link: '/projects/projet4', category: 'Design' },
-    { title: 'Projet 5', image: '/project5.jpg', link: '/projects/projet5', category: 'Sites' },
-    { title: 'Projet 6', image: '/project6.jpg', link: '/projects/projet6', category: 'Design' },
+    { 
+      title: 'Affiche Sport : Neymar Jr.', 
+      image: '/project1.jpg', 
+      link: '/projects/projet1', 
+      category: 'Design',
+      description: 'Affiche dédiée à Neymar Jr, un de mes joueurs de football préférés.'
+    },
+    { 
+      title: 'Affiche Sport : Lebron James', 
+      image: '/project2.jpg', 
+      link: '/projects/projet2', 
+      category: 'Design',
+      description: 'Plusieurs affiches dédiées à Lebron James, le plus grand joueur de basket de tout les temps.'
+    },
+    { 
+      title: 'CooHop! : Trouvez des partenaires sportifs aux alentours.', 
+      image: '/project3.jpg', 
+      link: '/projects/projet3', 
+      category: 'Sites',
+      description: 'Développement d’un site vitrine, et une application web permettant de trouver des partenaires sportifs à porximité.'
+    },
+    { 
+      title: 'Teaser JPO : Conservatoire Henri Dutilleux Belfort', 
+      image: '/project4.jpg', 
+      link: '/projects/projet4', 
+      category: 'Audiovisuel',
+      description: 'Vidéo réalisée, de la prise de vue au montage, pour mettre en avant la journée portes ouvertes réalisée par le conservatoire Henri Dutilleux de Belfort.'
+    },
+    { 
+      title: 'Université Pasteur Bourgogne Franche-Comté : Communication 360°', 
+      image: '/project5.jpg', 
+      link: '/projects/projet5', 
+      category: 'Design',
+      description: 'Rebranding complet de l′Université Bourgogne Franche-Comté.'
+    },
+    { 
+      title: 'La Maîtrise : Conservatoire Henri Dutilleux Belfort', 
+      image: '/project6.jpg', 
+      link: '/projects/projet6', 
+      category: 'Audiovisuel',
+      description: 'Vidéo réalisée durant mon stage au conservatoire Henri Dutilleux de Belfort, mettant en avant un enseignement à venir.'
+    },
   ];
 
   const filteredProjects = projects.filter((project) =>
@@ -31,7 +69,7 @@ const Projects = () => {
       <main className="min-h-screen bg-[#202020] text-[#FAFAF8] px-4 md:px-8 lg:px-24 py-8 md:py-16 lg:py-32">
         {/* ✅ Title Section */}
         <section className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">Mes Projets</h1>
+          <h1 className="text-4xl md:text-5xl mt-16 sm:mt-16 md:mt-12 lg:text-6xl font-bold mb-4">Mes Projets</h1>
           <p className="text-sm md:text-lg lg:text-xl max-w-2xl mx-auto">
             Découvrez une sélection de mes projets récents en design, développement web et montage vidéo.
           </p>
@@ -39,7 +77,7 @@ const Projects = () => {
 
         {/* ✅ Filter Buttons */}
         <section className="flex justify-center mb-8 gap-2 md:gap-4 flex-wrap">
-          {['Tous', 'Sites', 'Design'].map((category) => (
+          {['Tous', 'Sites', 'Design', 'Audiovisuel'].map((category) => (
             <button
               key={category}
               onClick={() => setFilter(category)}
@@ -54,51 +92,66 @@ const Projects = () => {
           ))}
         </section>
 
-        {/* ✅ Project Cards Grid */}
-        <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-12">
+        {/* ✅ Project Cards (Rows Only) */}
+        <section className="flex flex-col gap-6 md:gap-8 lg:gap-12">
           {filteredProjects.map((project, index) => (
             <motion.div
               key={index}
-              whileHover={{ scale: 1.05 }}
-              transition={{ type: 'spring', stiffness: 300 }}
-              className="relative overflow-hidden rounded-lg shadow-lg bg-[#FAFAF8] text-[#202020] group cursor-pointer h-[350px] md:h-[400px] lg:h-[500px]"
+              initial={{ height: '200px' }}
+              animate={{
+                height: expandedProject === index ? '400px' : '200px',
+                width: '100%',
+              }}
+              transition={{ type: 'ease-out', stiffness: 300 }}
+              onMouseEnter={() => setExpandedProject(index)}
+              onMouseLeave={() => setExpandedProject(null)}
+              className="relative overflow-hidden rounded-lg shadow-lg bg-[#FAFAF8] text-[#202020] cursor-pointer"
             >
-              <Link href={project.link}>
-                {/* ✅ Project Image */}
-                <div className="relative w-full h-[60%] md:h-[70%] overflow-hidden">
-                  <Image
-                    src={project.image}
-                    alt={project.title}
-                    layout="fill"
-                    objectFit="cover"
-                    className="transition-transform duration-300 group-hover:scale-110"
-                  />
-                </div>
+              {/* ✅ Project Image */}
+              <div className="relative w-full h-full">
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  layout="fill"
+                  objectFit="cover"
+                  className="transition-transform duration-300"
+                />
+              </div>
 
-                {/* ✅ Project Info */}
-                <div className="absolute inset-0 flex flex-col justify-end p-4 md:p-6 lg:p-8 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <h3 className="text-lg md:text-2xl font-semibold text-white">{project.title}</h3>
-                  <p className="text-xs md:text-sm lg:text-base text-white mt-1 md:mt-2 line-clamp-3">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.
-                  </p>
-                  <div className="flex justify-center mt-2 md:mt-4">
-                    <button className="text-[#202020] font-medium hover:underline hover:bg-[#202020] hover:text-[#fafaf8] transition-colors bg-[#fafaf8] rounded-full h-8 md:h-10 w-[150px] md:w-[191px]">
-                      SEE PROJECT →
-                    </button>
-                  </div>
-                </div>
-              </Link>
+              {/* ✅ Expanded Info */}
+              <AnimatePresence>
+                {expandedProject === index && (
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    className="absolute inset-0 bg-black/80 text-white flex flex-col justify-center items-center p-4"
+                  >
+                    <h3 className="text-2xl font-bold mb-2">{project.title}</h3>
+                    <p className="text-sm md:text-base mb-4 text-center">
+                      {project.description}
+                    </p>
+                    <Link href={project.link}>
+                      <button className="bg-[#FAFAF8] text-[#202020] px-4 py-2 rounded-full font-medium hover:bg-[#E6332A] hover:text-white">
+                        Voir le projet →
+                      </button>
+                    </Link>
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </motion.div>
           ))}
         </section>
 
         {/* ✅ Back to Home */}
         <div className="text-center mt-8 md:mt-16">
-          <Link href="/" className="text-sm md:text-lg font-bold text-[#fafaf8] hover:underline">
-            ← Retour à l&apos;accueil
+          <Link href="/#a-propos" className="text-sm md:text-lg font-bold text-[#fafaf8] hover:underline">
+            ← Retour
           </Link>
         </div>
       </main>
+      <Footer forceDarkMode={true} />
+
     </>
   );
 };

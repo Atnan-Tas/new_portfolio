@@ -135,9 +135,9 @@ const Contact = () => {
             atnan.tas.pro@gmail.com
           </a>
         </div>
-        <div className="flex items-center gap-2 group">
+        <div className="flex items-center gap-2 group group-hover:text-[#E6332A] transition-colors">
           <FaPhoneAlt className="text-[#202020] group-hover:text-[#E6332A] transition-colors" />
-          <p className="text-lg">+33 7 83 14 73 72</p>
+          <p className="text-lg group-hover:text-[#E6332A] transition-colors">+33 7 83 14 73 72</p>
         </div>
 
         {/* 🌐 Réseaux Sociaux */}
