@@ -15,7 +15,7 @@ const Projects = () => {
     { 
       title: 'Affiche Sport : Neymar Jr.', 
       image: '/project1.jpg', 
-      link: '/projects/projet1', 
+      link: '/neymar', 
       category: 'Design',
       description: 'Affiche dédiée à Neymar Jr, un de mes joueurs de football préférés.'
     },

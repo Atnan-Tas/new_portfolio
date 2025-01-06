@@ -102,7 +102,7 @@ const Header = ({ forceDarkMode = false }: HeaderProps) => {
               <li>
                 <Link
                   href="/contact"
-                  className="px-4 py-2 rounded-full font-medium cursor-pointer bg-[#FAFAF8] text-[#202020] hover:bg-gray-300"
+                  className="px-4 py-2 rounded-full font-medium cursor-pointer bg-[#FAFAF8] text-[#202020] hover:bg-[#e6332a] hover:text-[#FAFAF8]"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   CONTACTEZ-MOI !
