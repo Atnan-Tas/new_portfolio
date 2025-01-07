@@ -46,7 +46,7 @@ const NeymarProject = () => {
         <section className="text-center mb-12 pt-12">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold">CooHop! : Trouvez des partenaires sportifs aux alentours.</h1>
           <p className="text-sm md:text-lg lg:text-xl mt-4 text-[#202020]">
-          Développement d’un site vitrine, et une application web permettant de trouver des partenaires sportifs à porximité.          
+          Développement d&apos;un site vitrine, et une application web permettant de trouver des partenaires sportifs à porximité.          
           </p>
         </section>
 
@@ -55,9 +55,9 @@ const NeymarProject = () => {
           {/* ✅ Text Section */}
           <div className="md:w-1/2">
             <p className="text-lg md:text-xl leading-relaxed text-[#202020]">
-            Pour le projet CooHop, j'ai pris en charge la conception complète du design de l'application. De la création de la maquette à la définition de l'identité visuelle, chaque choix graphique a été pensé pour offrir une expérience utilisateur fluide et intuitive.               <br /><br />Sa capacité à dribbler, à créer des occasions impossibles et à électriser tout un stade ont marqué une époque inoubliable.
-              <br /><br /> L'identité visuelle repose sur des couleurs dynamiques et des typographies modernes, reflétant les valeurs de partage, d'accessibilité et de convivialité propres à l'application. Ma partie préférée a été de traduire ces principes en un design harmonieux, où chaque écran et chaque élément visuel contribuent à renforcer l'engagement des utilisateurs.
-              <br /><br />Ce projet m'a permis de combiner créativité et fonctionnalité, en plaçant toujours l'utilisateur au cœur du processus de conception.
+            Pour le projet CooHop, j&apos;ai pris en charge la conception complète du design de l&apos;application. De la création de la maquette à la définition de l&apos;identité visuelle, chaque choix graphique a été pensé pour offrir une expérience utilisateur fluide et intuitive.               <br /><br />Sa capacité à dribbler, à créer des occasions impossibles et à électriser tout un stade ont marqué une époque inoubliable.
+              <br /><br /> L&apos;identité visuelle repose sur des couleurs dynamiques et des typographies modernes, reflétant les valeurs de partage, d&apos;accessibilité et de convivialité propres à l&apos;application. Ma partie préférée a été de traduire ces principes en un design harmonieux, où chaque écran et chaque élément visuel contribuent à renforcer l&apos;engagement des utilisateurs.
+              <br /><br />Ce projet m&apos;a permis de combiner créativité et fonctionnalité, en plaçant toujours l&apos;utilisateur au cœur du processus de conception.
               </p>
             <div className="mt-8">
               <Link

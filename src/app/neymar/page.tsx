@@ -45,7 +45,7 @@ const NeymarProject = () => {
         <section className="text-center mb-12 pt-12">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold">Affiche Sport : Neymar Jr.</h1>
           <p className="text-sm md:text-lg lg:text-xl mt-4 text-[#202020]">
-            Un projet visuel captivant mettant en avant l'énergie du football.
+            Un projet visuel captivant mettant en avant l&apos;énergie du football.
           </p>
         </section>
 
@@ -54,11 +54,11 @@ const NeymarProject = () => {
           {/* ✅ Text Section */}
           <div className="md:w-1/2">
             <p className="text-lg md:text-xl leading-relaxed text-[#202020]">
-              Lorsque Neymar a rejoint le FC Barcelone, il n'a pas seulement intégré une équipe, il a fusionné avec une philosophie, un style de jeu, une identité. 
+              Lorsque Neymar a rejoint le FC Barcelone, il n&apos;a pas seulement intégré une équipe, il a fusionné avec une philosophie, un style de jeu, une identité. 
               <br /><br />Sa capacité à dribbler, à créer des occasions impossibles et à électriser tout un stade ont marqué une époque inoubliable.
               <br /><br /> Ce projet est né de mon désir de capturer cet esprit. À travers une composition soignée, 
-              une palette de couleurs audacieuse et une typographie moderne, cette affiche vise à retranscrire la vitesse, l'agilité et le charisme de Neymar sur le terrain.
-              <br /><br />Elle raconte une histoire, celle d'un joueur qui, par ses performances, a transcendé les frontières du football pour devenir une véritable icône mondiale.
+              une palette de couleurs audacieuse et une typographie moderne, cette affiche vise à retranscrire la vitesse, l&apos;agilité et le charisme de Neymar sur le terrain.
+              <br /><br />Elle raconte une histoire, celle d&apos;un joueur qui, par ses performances, a transcendé les frontières du football pour devenir une véritable icône mondiale.
             </p>
             <div className="mt-8">
               <Link

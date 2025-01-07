@@ -27,8 +27,8 @@ const PasteurProject = () => {
           {/* ✅ Text Section */}
           <div className="md:w-1/2">
             <p className="text-lg md:text-xl leading-relaxed text-[#202020]">
-            Pour les Journées Portes Ouvertes du Conservatoire Henri Dutilleux, j'ai réalisé une vidéo teaser dynamique pour attirer et informer le public (parents, professeurs, élèves, futurs élèves).
-            <br /> <br /> À travers un montage rythmé et des séquences visuelles variées, j'ai cherché à retranscrire l'énergie et la diversité des disciplines enseignées. <br />
+            Pour les Journées Portes Ouvertes du Conservatoire Henri Dutilleux, j&apos;ai réalisé une vidéo teaser dynamique pour attirer et informer le public (parents, professeurs, élèves, futurs élèves).
+            <br /> <br /> À travers un montage rythmé et des séquences visuelles variées, j&apos;ai cherché à retranscrire l&apos;énergie et la diversité des disciplines enseignées. <br />
             Ma partie préférée a été de filmer les artistes en ouvre du conservatoire en quelques instants, en créant une vidéo courte et facile à partager.
                     </p>
             <div className="mt-8">

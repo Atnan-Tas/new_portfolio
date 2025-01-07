@@ -27,9 +27,9 @@ const PasteurProject = () => {
           {/* ✅ Text Section */}
           <div className="md:w-1/2">
             <p className="text-lg md:text-xl leading-relaxed text-[#202020]">
-            Pour ce projet, j'ai réalisé une interview vidéo complète pour le Conservatoire Henri Dutilleux. <br />
-            De l'écriture du scénario et des textes, au cadrage, au tournage et au montage final, chaque étape a été pensée pour créer une vidéo courte, dynamique et ludique. 
-            <br /> <br />L'objectif était de capter le message tout en rendant le contenu accessible et engageant pour le public. <br /> <br />     Ma partie préférée a été de donner vie aux échanges à travers un montage fluide et une narration visuelle claire, en équilibrant informations et spontanéité pour maintenir l'intérêt du spectateur du début à la fin.
+            Pour ce projet, j&apos;ai réalisé une interview vidéo complète pour le Conservatoire Henri Dutilleux. <br />
+            De l&apos;écriture du scénario et des textes, au cadrage, au tournage et au montage final, chaque étape a été pensée pour créer une vidéo courte, dynamique et ludique. 
+            <br /> <br />L&apos;objectif était de capter le message tout en rendant le contenu accessible et engageant pour le public. <br /> <br />     Ma partie préférée a été de donner vie aux échanges à travers un montage fluide et une narration visuelle claire, en équilibrant informations et spontanéité pour maintenir l&apos;intérêt du spectateur du début à la fin.
             </p>
             <div className="mt-8">
               <Link

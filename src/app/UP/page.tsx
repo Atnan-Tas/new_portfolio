@@ -27,15 +27,15 @@ const PasteurProject = () => {
           {/* ✅ Text Section */}
           <div className="md:w-1/2">
             <p className="text-lg md:text-xl leading-relaxed text-[#202020]">
-              Dans le cadre du projet de rebranding de l'Université Pasteur, j'ai piloté une stratégie de communication 360°, alliant direction artistique, conception graphique et production de contenus multimédias.
+              Dans le cadre du projet de rebranding de l&apos;Université Pasteur, j&apos;ai piloté une stratégie de communication 360°, alliant direction artistique, conception graphique et production de contenus multimédias.
               <br /><br />
-              Le logo, repensé autour des initiales "UP", propose une identité visuelle moderne et impactante, incarnant les valeurs fondamentales de l'université : innovation et excellence.
+              Le logo, repensé autour des initiales &quot;UP&quot;, propose une identité visuelle moderne et impactante, incarnant les valeurs fondamentales de l&apos;université : innovation et excellence.
               <br /><br />
-              J'ai réalisé une série de supports incluant des mock-ups, des vidéos animées sous After Effects, ainsi que des publications pour les réseaux sociaux, assurant une cohérence visuelle et narrative sur tous les canaux de communication.
+              J&apos;ai réalisé une série de supports incluant des mock-ups, des vidéos animées sous After Effects, ainsi que des publications pour les réseaux sociaux, assurant une cohérence visuelle et narrative sur tous les canaux de communication.
               <br /><br />
-              Ma partie préférée a été de créer une identité forte à partir des principes et valeurs de l'université, en traduisant visuellement son essence et son ambition.
+              Ma partie préférée a été de créer une identité forte à partir des principes et valeurs de l&apos;université, en traduisant visuellement son essence et son ambition.
               <br /><br />
-              Ce projet m'a permis d'explorer la transversalité des médias tout en consolidant mon approche stratégique et créative.
+              Ce projet m&apos;a permis d&apos;explorer la transversalité des médias tout en consolidant mon approche stratégique et créative.
             </p>
             <div className="mt-8">
               <Link

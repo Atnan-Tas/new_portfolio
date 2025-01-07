@@ -16,7 +16,7 @@ const LebronProject = () => {
         <section className="text-center mb-12 pt-12">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold">Affiche Sport : LeBron James</h1>
           <p className="text-sm md:text-lg lg:text-xl mt-4 text-[#202020]">
-            Un hommage visuel à l'un des plus grands basketteurs de tous les temps.
+            Un hommage visuel à l&apos;un des plus grands basketteurs de tous les temps.
           </p>
         </section>
 
@@ -25,13 +25,13 @@ const LebronProject = () => {
           {/* ✅ Text Section */}
           <div className="md:w-1/2">
             <p className="text-lg md:text-xl leading-relaxed text-[#202020]">
-              Depuis mes débuts dans le design, j'ai toujours été inspiré par les figures emblématiques du sport. Parmi elles, LeBron James se distingue comme un leader, un compétiteur acharné et une légende vivante du basketball.  
+              Depuis mes débuts dans le design, j&apos;ai toujours été inspiré par les figures emblématiques du sport. Parmi elles, LeBron James se distingue comme un leader, un compétiteur acharné et une légende vivante du basketball.  
               <br /><br />
-              À travers cette affiche, j'ai voulu capturer non seulement la puissance physique de LeBron, mais également son esprit combatif et sa présence imposante sur le terrain. Chaque détail de cette composition a été soigneusement pensé pour retranscrire l'énergie brute qu'il dégage lors de chaque match.
+              À travers cette affiche, j&apos;ai voulu capturer non seulement la puissance physique de LeBron, mais également son esprit combatif et sa présence imposante sur le terrain. Chaque détail de cette composition a été soigneusement pensé pour retranscrire l&apos;énergie brute qu'il dégage lors de chaque match.
               <br /><br />
               Les couleurs choisies rappellent les moments iconiques de sa carrière, les jeux de lumière symbolisent les projecteurs qui illuminent chaque moment décisif, et la typographie audacieuse évoque la détermination inébranlable qui le caractérise.
               <br /><br />
-              Cette affiche raconte plus qu'une histoire de sport : elle est le reflet d'un athlète qui a su marquer son époque et inspirer des millions de fans à travers le monde.
+              Cette affiche raconte plus qu&apos;une histoire de sport : elle est le reflet d&apos;un athlète qui a su marquer son époque et inspirer des millions de fans à travers le monde.
             </p>
             <div className="mt-8">
               <Link
