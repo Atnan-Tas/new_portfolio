@@ -27,7 +27,7 @@ const LebronProject = () => {
             <p className="text-lg md:text-xl leading-relaxed text-[#202020]">
               Depuis mes débuts dans le design, j&apos;ai toujours été inspiré par les figures emblématiques du sport. Parmi elles, LeBron James se distingue comme un leader, un compétiteur acharné et une légende vivante du basketball.  
               <br /><br />
-              À travers cette affiche, j&apos;ai voulu capturer non seulement la puissance physique de LeBron, mais également son esprit combatif et sa présence imposante sur le terrain. Chaque détail de cette composition a été soigneusement pensé pour retranscrire l&apos;énergie brute qu'il dégage lors de chaque match.
+              À travers cette affiche, j&apos;ai voulu capturer non seulement la puissance physique de LeBron, mais également son esprit combatif et sa présence imposante sur le terrain. Chaque détail de cette composition a été soigneusement pensé pour retranscrire l&apos;énergie brute qu&apos;il dégage lors de chaque match.
               <br /><br />
               Les couleurs choisies rappellent les moments iconiques de sa carrière, les jeux de lumière symbolisent les projecteurs qui illuminent chaque moment décisif, et la typographie audacieuse évoque la détermination inébranlable qui le caractérise.
               <br /><br />

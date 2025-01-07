@@ -9,33 +9,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
 const NeymarProject = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  const projects = [
-    { title: 'Projet 1', image: '/project1.jpg', link: '/neymar' },
-    { title: 'Projet 2', image: '/project2.jpg', link: '/projects/projet2' },
-    { title: 'Projet 3', image: '/project3.jpg', link: '/projects/projet3' },
-    { title: 'Projet 4', image: '/project4.jpg', link: '/projects/projet4' },
-  ];
-
-  // ✅ Défilement automatique
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % projects.length);
-    }, 5000); // Change de projet toutes les 5 secondes
-
-    return () => clearInterval(interval);
-  }, [projects.length]);
-
-  const handleNext = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % projects.length);
-  };
-
-  const handlePrev = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? projects.length - 1 : prevIndex - 1
-    );
-  };
+  
 
   return (
     <>
