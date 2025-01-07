@@ -8,7 +8,7 @@ import Footer from '@/components/Footer';
 
 const Projects = () => {
   const [filter, setFilter] = useState('Tous');
-  const [expandedProject, setExpandedProject] = useState(null);
+  const [expandedProject, setExpandedProject] = useState<number | null>(null);
 
   const projects = [
     { 
@@ -30,7 +30,7 @@ const Projects = () => {
       image: '/project3.jpg', 
       link: '/coohop', 
       category: 'Sites',
-      description: 'Développement d’un site vitrine, et une application web permettant de trouver des partenaires sportifs à porximité.'
+      description: 'Développement d’un site vitrine, et une application web permettant de trouver des partenaires sportifs à proximité.'
     },
     { 
       title: 'Teaser JPO : Conservatoire Henri Dutilleux Belfort', 
@@ -150,7 +150,6 @@ const Projects = () => {
         </div>
       </main>
       <Footer forceDarkMode={true} />
-
     </>
   );
 };
