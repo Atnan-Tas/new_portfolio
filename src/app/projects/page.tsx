@@ -1,5 +1,4 @@
 'use client';
-
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
@@ -22,35 +21,35 @@ const Projects = () => {
     { 
       title: 'Affiche Sport : Lebron James', 
       image: '/project2.jpg', 
-      link: '/projects/projet2', 
+      link: '/lebron', 
       category: 'Design',
       description: 'Plusieurs affiches dédiées à Lebron James, le plus grand joueur de basket de tout les temps.'
     },
     { 
       title: 'CooHop! : Trouvez des partenaires sportifs aux alentours.', 
       image: '/project3.jpg', 
-      link: '/projects/projet3', 
+      link: '/coohop', 
       category: 'Sites',
       description: 'Développement d’un site vitrine, et une application web permettant de trouver des partenaires sportifs à porximité.'
     },
     { 
       title: 'Teaser JPO : Conservatoire Henri Dutilleux Belfort', 
       image: '/project4.jpg', 
-      link: '/projects/projet4', 
+      link: '/JPO', 
       category: 'Audiovisuel',
       description: 'Vidéo réalisée, de la prise de vue au montage, pour mettre en avant la journée portes ouvertes réalisée par le conservatoire Henri Dutilleux de Belfort.'
     },
     { 
       title: 'Université Pasteur Bourgogne Franche-Comté : Communication 360°', 
       image: '/project5.jpg', 
-      link: '/projects/projet5', 
+      link: '/UP', 
       category: 'Design',
       description: 'Rebranding complet de l′Université Bourgogne Franche-Comté.'
     },
     { 
       title: 'La Maîtrise : Conservatoire Henri Dutilleux Belfort', 
       image: '/project6.jpg', 
-      link: '/projects/projet6', 
+      link: '/maitrise', 
       category: 'Audiovisuel',
       description: 'Vidéo réalisée durant mon stage au conservatoire Henri Dutilleux de Belfort, mettant en avant un enseignement à venir.'
     },
