@@ -97,8 +97,8 @@ const About = () => {
 
           {/* Bouton Télécharger CV */}
           <a
-            href="/CV_Atnan_Tas_2024-2.pdf"
-            download="CV_Atnan_Tas_2024-2.pdf"
+            href="/CV_Atnan_Tas_2025.pdf"
+            download="CV_Atnan_Tas_2025.pdf"
             className="bg-transparent border-2 border-[#202020] hover:bg-[#202020] hover:text-[#FAFAF8] text-[#202020] px-6 py-2 rounded-full font-medium text-sm sm:text-lg text-center transition-colors duration-300"
           >
             Télécharger mon CV
