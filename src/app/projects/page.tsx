@@ -53,6 +53,13 @@ const Projects = () => {
       category: 'Audiovisuel',
       description: 'Vidéo réalisée durant mon stage au conservatoire Henri Dutilleux de Belfort, mettant en avant un enseignement à venir.'
     },
+    { 
+      title: 'Conservatoire du Pays de Montbéliard', 
+      image: '/mockup2.png', 
+      link: '/pma', 
+      category: 'Design',
+      description: 'Communication 360° pour le conservatoire du Pays de Montbéliard.'
+    },
   ];
 
   const filteredProjects = projects.filter((project) =>
