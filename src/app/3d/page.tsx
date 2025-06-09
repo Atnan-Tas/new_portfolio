@@ -21,7 +21,7 @@ const blender = () => {
   });
 
   useEffect(() => {
-    let raf;
+    let raf: number;
     const animate = () => {
       if (instanceRef.current) {
         instanceRef.current.next();
