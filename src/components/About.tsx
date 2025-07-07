@@ -76,7 +76,7 @@ const About = () => {
           À propos de moi
         </h2>
         <p className="text-sm sm:text-base md:text-lg leading-relaxed mb-6 mr-4 md:mr-6">
-          Salut ! 👋 Je m&apos;appelle Atnan Tas, étudiant en Métiers du Multimédia et de l&apos;Internet (MMI) à Montbéliard.
+          Salut ! 👋 Je m&apos;appelle Atnan Tas, étudiant en Master Direction artistique - Brand & Motion Design chez Ynov à Strasbourg.
           <br /><br />
           Passionné par le design graphique, le développement web et le montage vidéo, je m&apos;efforce de créer des expériences visuelles et interactives uniques.
           <br /><br />
